@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    120deg,
+    rgb(170, 230, 50),
+    rgb(120, 163, 35)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: clamp(300px, 50%, 500px);
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.671);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  min-width: 100px;
+
+}
+#head {
+  font: 1.4rem bolder;
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgoldenrod;
+}
+.elements {
+  display: flex;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+button{
+    border-radius: 50%;
+    font-size: 2.5rem;
+    border: 2px solid black;
+    padding: 4px 8px;
+    background-color: yellowgreen;
+    box-shadow: 2px 5px 10px 1px rgba(32, 178, 171, 0.589);
+    cursor: pointer;
+    
+}
+#scissor{
+    font-size: 3rem;
+    padding: 2px 10px;
+}
+.count {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 15%;
+  box-shadow: 2px 3px 10px 1px rgba(32, 178, 171, 0.705);
+  border-radius: 10px;
+
+  justify-content: space-around;
+}
+.count {
+  height: 20%;
+  
+}
+.compcount, .youcount , .compchose{
+width: clamp(70px, 20%, 100px);
+height: 60%;
+border: 1px solid black;
+background: greenyellow;
+text-align: center;
+border-radius: 9px;
+}
+#compcount, #youcount{
+  font-size: 1.2rem;
+  margin-top: 5%;
+}
+#compchose{
+  font-size: 1rem;
+  margin: 0 2px;
+}
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 20%;
+  margin-top: 5%;
+}
+.result .display {
+  height: 60%;
+  width: 35%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: yellowgreen;
+  text-align: center;
+}
+.display p {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  padding: 7px 8px;
+  color: white;
+}

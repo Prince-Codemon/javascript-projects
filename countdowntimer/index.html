@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            min-height: 100px;
+            max-height: 150px;
+            min-width: 300px;
+            width: 30%;
+            height: 20%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 9px;
+        }
+
+        .head {
+            width: 100%;
+            height: 30%;
+            text-align: center;
+            border-bottom: 1px solid grey;
+
+        }
+
+        .head p {
+            font-size: 1.5rem;
+            color: hotpink;
+            font-weight: bolder;
+        }
+
+        .show {
+            width: 100%;
+            height: 70%;
+            text-align: center;
+        }
+
+        .show p {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            margin-top: 5%;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="head">
+                <p id="head"> CountDown Timer for 1Year</p>
+            </div>
+            <div class="show">
+                <p id="showvalue"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var dest = Date.now() + 60 * 1000 * 60 * 24 * 365;
+    setInterval(function () {
+        var now = new Date().getTime()
+        var diff = dest - now;
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000)
+        document.getElementById("showvalue").innerHTML = `${days}D : ${hours}H : ${minutes}M : ${seconds}S`
+        // console.log(days, hours, minutes, seconds);
+    }, 1000)
+
+</script>
+
+</html>

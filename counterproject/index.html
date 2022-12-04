@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="count-area">
+                <h1 id="showcount">0</h1>
+            </div>
+            <div class="btns">
+                <div class="inc">
+                    <button id="plus">+</button>
+                </div>
+                <div class="dec">
+                    <button id="minus"> -</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var count = 0;
+    plus.addEventListener('click', () => {
+        count++;
+        document.getElementById('showcount').innerHTML = count;
+    })
+    minus.addEventListener('click', () => {
+        if (count > 0) {
+            count--;
+        }
+        document.getElementById('showcount').innerHTML = count;
+    })
+
+</script>
+
+</html>
